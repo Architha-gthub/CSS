@@ -1,0 +1,74 @@
+.outer-box{
+    width: 500px;
+    height:500px;
+    border: solid black;
+    position: relative;
+}
+.inner-box{
+    width: 200px;
+    height: 200px;
+    top: 150px;
+    bottom: 150px;
+    left: 150px;
+    right: 150px;
+    border: solid red;
+    position: absolute;
+}
+.card{
+    width: 500px;
+    height: 500px;
+    border:solid red;
+    position: relative;
+}
+.icon{
+    width: 250px;
+    height: 250px;
+    bottom:0px;
+    right:0px;
+    border: solid black;
+    position: absolute;
+}
+.tooltip-container{
+    width: 500px;
+    height: 500px;
+    border:solid orangered;
+    position: relative;
+}
+.tooltip{
+    width:150px;
+    height: 150px;
+    position: absolute;
+    border: solid black;
+
+}
+.avatar-container{
+    width: 250px;
+    height: 250px;
+    border:solid purple;
+    position: relative;
+}
+.badge{
+    width: 50px;
+    height: 50px;
+    Top:0px;
+    right:0px;
+    border: solid red;
+    position:absolute;
+}
+.image-container{
+    width: 300px;
+    height: 300px;
+    border:solid red;
+    position:relative;
+}
+.overlay{
+    position: absolute;
+    width: 75px;
+    top:20px;
+    left: 10px;
+    background-color:black;
+    color: aliceblue;
+    padding:0px;
+
+
+}
