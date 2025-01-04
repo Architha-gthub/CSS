@@ -1,0 +1,38 @@
+.container .box>p{
+    background-color: yellowgreen;
+    padding: 20px;
+
+
+}
+.section .content p{
+    background-color: yellow;
+    margin: 15px;
+}
+.card .card-body>p{
+    border:2px solid red;
+}
+.navbar>ul>li
+{
+    background-color: lightblue;
+}
+.header>h1{
+    background-color: aqua;
+    margin-top: 20px;
+}
+.footer >span{
+    background-color: cornflowerblue;
+    padding: 10px;
+}
+.main-content .content>p{
+    border: 1px solid black;
+}
+.nav ul >li{
+    margin-right: 15px;
+    border: 1px solid red;}
+    .gallery .photo{
+        background-color: lightgray;
+    }
+.footer>span{
+     border-radius:5px;
+     border: solid black;
+    }
