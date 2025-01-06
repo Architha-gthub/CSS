@@ -1,0 +1,109 @@
+.container{
+    display: flex;
+    background-color:black;
+    color: white;
+    justify-content: space-between;
+    position: sticky;
+}
+.item{
+    padding: 5px;
+    font-size: 16px;
+}
+*
+{
+    margin: 0px;
+}
+.box1{
+    display: flex;
+    background-color:black;
+    color: white;
+    justify-content: space-between;
+    position: sticky;
+}
+.container1{
+    display: flex;
+    background-color:black;
+    color: white;
+    justify-content: space-between;
+    position: sticky;
+}
+.search{
+    flex-direction: row;
+    align-items: start;
+    justify-content: end;
+    display: flex;
+}
+.box1{
+    display: flex;
+    background-color:black;
+    color: white;
+    justify-content:space-between;
+    padding: 10px;
+
+}
+p{
+    justify-content:space-between;
+    display:block;
+}
+h3{
+    background-color: green;
+    color:black;
+    width: 300px;
+    left: 500px;
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    padding: 5px;
+    top: 50px;
+}
+h4
+{
+    background-color: red;
+    color: white;
+    position:absolute;
+    right:630px;
+    padding: 5px;
+    top: 50px;
+}
+.background{
+    background-image: url(https://images.unsplash.com/photo-1440964829947-ca3277bd37f8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    height: 900px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+
+}
+.span1 {
+    position: relative;
+    top: 30px;
+    color: aliceblue;
+    font-size: 30px;
+    left: 30px}
+    .soon {
+        color: aliceblue;
+        position: relative;
+        text-align: center;
+        font-family: monospace;
+        text-decoration:underline;
+        font-size: 70px;
+        top: 300px;
+        left: 80px;}
+        .date{
+            justify-content: center;color: white;
+            position: absolute;
+            top: 420px;
+            left: 650px;
+            font-size: 25px;
+        
+        }
+        .link{
+
+                position: absolute;
+                left: 10px;
+                bottom: 10px;
+                color: white;
+        }
+        a{
+            background-color:blue;
+            color: aliceblue;
+        }
