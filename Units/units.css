@@ -1,0 +1,70 @@
+.box-px{
+    width: 200px;
+    height: 100px;
+    border:solid 4px black;
+
+}
+.parent-percent{
+    width: 250px;
+    height: 250px;
+    border:solid 5px blue;
+
+ 
+}
+.child-percent{
+    width:50%;
+    height:50%;
+    border:solid 4px red;
+}
+p{
+    font-size: 2rem;
+}
+.parent-em{
+    font-size: 16px;
+}
+.child-em{
+    font-size: 1.5em;
+}
+.box-vw{
+    width:50vw;
+    border:solid 4px blueviolet;
+}
+.box-vh{
+    width:50vh;
+    border:solid 4px crimson;
+}
+.square-vmin{
+    width:20vmin;
+    height: 20vmin;
+    border:solid 4px black ;
+}
+.square-vmax{
+    width:20vmax;
+    height: 20vmax;
+    border:solid 4px black ;
+}
+.parent-relative{
+    width:200px;
+    height: 200px;
+    border: solid 4px coral;
+    position:relative;
+}
+.child-absolute{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    border: solid 4px black;
+    bottom:0px;
+    right: 0px;
+}
+.parent-font{
+    width: 100px;
+    height: 100px;
+    border: solid 4px black;
+    font: 20px; ;
+}
+.child-font{
+    font-size: inherit;
+    width:fit-content;
+    border: solid 2px purple;
+}
