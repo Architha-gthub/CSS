@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: brown;
+            padding: 3px;
+            justify-content: space-between;
+
+}
+.orange{
+    background-color: orange;
+    color: black;
+    width:fit-content;
+    padding: 3px;
+    border: solid 2px black;
+}
+.subcontainer{
+    display: flex;
+    width:fit-content;
+    padding: 3px;
+    border: solid 2px black;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+.yellow{
+    background-color: yellow;
+    color: black;
+    width: fit-content;
+    padding: 3px;
+    border: solid 2px black;
+}
+.green{
+    background-color: green;
+    color: black;
+    width: fit-content;
+    padding: 3px;
+    border: solid 2px black;
+}
+@media screen and (width <=600px){
+    .yellow,.green{
+        display: none;
+    }
+    .subcontainer{
+        background-color: white;
+        width: fit-content;
+    }
+}
+    
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="orange">orange</div>
+        <div class="subcontainer">
+            <div class="yellow">yellow</div>
+            <div class="green">green</div>
+        </div>
+    </div>
+    
+</body>
+</html>
