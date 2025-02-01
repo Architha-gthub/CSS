@@ -9,11 +9,13 @@ body {
     background-image:url(https://websitedemos.net/flower-shop-04/wp-content/uploads/sites/1414/2023/10/hero-bg.jpg);
     color: white;
     background-repeat: no-repeat;
+    /* background: rgba(0, 0, 0, 0.5);
+ */
 }
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 20px;
     background: rgba(0, 0, 0, 0.5);
@@ -40,7 +42,7 @@ nav ul li {
     margin: 0 15px;
 }
 
-nav ul li a {
+nav>ul>li> a {
     color: white;
     text-decoration: none;
     font-size: 18px;
@@ -50,8 +52,7 @@ nav ul li a.active,
 nav ul li a:hover {
     color: #ff7f7f;
 }
-
-.id {
+ .id {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -59,6 +60,7 @@ nav ul li a:hover {
     text-align: center;
     background: rgba(0, 0, 0, 0.3);
 }
+
 .content {
     max-width: 700px;
 }
@@ -115,35 +117,45 @@ p {
     font-size: 0.99rem;
     color: #555;
 }
-.subcontainer{
-    display: block;
-    border-left: solid 2px #ff7f7f;
-    padding: 4px;
+.maincontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
 }
-.images{
-    border-top-left-radius: 30px;
-            border-top-right-radius: 30px;
-}
-.section{
-    display: flex;
-    justify-content:center;
-    gap:10px;
-}
-.imagecontent{
-    display: flex;
-    align-items: center;
-    justify-content:space-around;
 
-    
+.subcontainer {
+    background-color: #f9f9f9;
+    padding: 15px;
+    text-align: center;
+    border-radius: 8px;
 }
-.subsection{
-    justify-content:space-between;
-    align-items: center;
+
+/* Media query for mobile devices (widths 480px and below) */
+@media (max-width: 480px) {
+    .maincontainer {
+        grid-template-columns: 1fr;
+    }
+}
+.section {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;                                 
+    padding: 20px;
+}
+
+.imagecontainer {
+    display: flex;
+    width:48%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#img-1, #img-2 {
+    width:48%;
+    height:100%;
 }
 #img-1{
-    /* border-top-left-radius:200%;
-    border-top-right-radius:200%;
-    height:1%; */
     border-radius: 180px 180px 0 0;
 }
 #img-2{
@@ -152,69 +164,192 @@ p {
     border-radius: 600px 600px 0 0;
 
 }
-.imagecontent .h4{
-    font-size: 24px;
-    font-weight: bold;
+.imagecontent {
+    width:48%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-.imagecontent .p{
-    font-size: 16px;
-    margin-bottom: 15px;
 
-}
-.read-more {
-    background-color: #ff6b57;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
-    border-radius: 5px;
-}
-.read-more:hover {
-    background-color: #e05648;
-}
-.matter{
+.subsection {
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
-    background-color: #fdf8f6;
+}
+
+h6 {
+    color: #ff7f7f;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    background-color: #ff7f7f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.read-more:hover {
+    background-color: #ff4f4f;
+}
+
+/* Media Queries */
+/* Mobile devices */
+@media (max-width: 480px) {
+    .imagecontainer {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #img-1, #img-2 {
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .imagecontent {
+        width: 80%;
+        padding: 10px;
+    }
+
+    .subsection {
+        max-width: 100%;
+        margin: 0;
+    }
+    h2 {
+        font-size: 1.2em;
+    }
+
+    p {
+        font-size: 0.8em;
+    }
+
+    .read-more {
+        font-size: 0.8em;
+    }
+}
+
+.matter {
+    padding: 20px;
+    text-align: center;
+}
+
+.secondline h1 {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.thirdline p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Flowers Card Layout */
+.flowerscard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.sale {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: red;
+    color:black;
+    padding: 5px;
+    font-size: 0.8em;
+}
+
+.stars {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.rate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: gray;
+    margin-right: 5px;
+}
+
+.price {
+    color: green;
+    font-size: 1.2em;
 }
 .flowers{
-    color: #ff7f7f;
-    font-size:14px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: #ff6347;
 }
-.flowerscard{
-            display: flex;
-            justify-content:space-between;
-            gap: 20px;
-           flex-wrap: wrap;
-           width:100%;
-        
-            
-            
+.secondline{
+    font-weight: bold;
 }
-.card1{
-  display: flex; 
-    justify-content: space-between;
-    width:100%;
+/* Media Queries */
 
+/* Tablets and below */
+@media (max-width: 768px) {
+    .secondline h1 {
+        font-size: 1.5em;
+    }
+
+    .thirdline p {
+        font-size: 0.9em;
+    }
+
+    .flowerscard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        margin: 10px 0;
+    }
 }
-.card2{
-    display: flex;
-    justify-content: space-between;
-    width:100%;
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .secondline h1 {
+        font-size: 1.2em;
+    }
+
+    .thirdline p {
+        font-size: 0.8em;
+    }
+
+    .card {
+        width: 90%;
+    }
 }
-.card{
-    background: white; 
-    /* border-radius: 15px; */
-     padding: 15px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);  */
-    width:100%;
-    text-align: center;
-    position: relative;
-    transition: transform 0.3s ease;
-} 
-.sale{
+
+.sale{ 
     position: absolute;
              top: 20px;
             left: 20px;
@@ -225,41 +360,105 @@ p {
             font-weight: bold;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
-        /* .card:hover {
+        .card:hover {
             transform: translateY(-10px);
-        } */
+        }
         .card img {
             width: 100%;
             /* border-radius: 15px; */
             height: 100%;
         
-        }
+        } 
         .picture{
-            border-top-left-radius: 350px;
-            border-top-right-radius: 350px;
-        
-        
-        
-            
-        }
-        .roses{
-            padding-top:3%;
-            display:flex;
-            justify-content:space-around;
-            align-content: center;
-            align-items: center;
-            background-color: black;
-            width: 100%;
-            }
+            border-top-left-radius:50%;
+            border-top-right-radius:50% ;
+        }   
+
+.roses {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.rosescontent {
+    text-align: center;
+    color: white;
+    margin: 10px;
+}
+
+.rosescontent p {
+    color: #ff7f7f;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.rosescontent h3 {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 2em;
+    margin: 10px 0;
+}
+
+.shop-btn {
+    display: inline-block;
+    background-color: #ff7f7f;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Matter Section */
+.matter {
+    text-align: center;
+    padding: 20px;
+}
+
+.matter h6 {
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.matter h1 {
+    font-family: 'Times New Roman', Georgia, serif;
+    font-size: 2.5em;
+    margin: 10px 0;
+}
+
+.matter p {
+    font-size: 1em;
+    margin: 10px 0;
+}
+@media (max-width: 480px) {
+    .rosescontent h3 {
+        font-size: 1.2em;
+    }
+
+    .shop-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+}
+           
 .bottom{
     text-align: center;
-    margin-left:30%;
-    margin-right: 30%;
-    padding-top:5%;
-    justify-content: space-around;
 }
 .one{
     text-align: center;
+    
+}
+.Authors{
+    display: flex;
+    justify-content:space-around;
+}
+@media (max-width: 480px) {
+    .Authors{
+        display: flex;
+        flex-direction:column ;
+    }
 }
 .Footer{
     display:flex;
@@ -277,8 +476,14 @@ h6 a{
 .active{
     color: #ff6347;
 }
+@media (max-width: 480px) {
+    .Footer{
+        display: flex;
+        flex-direction:column ;
+    }
+}
 .socialmedia>a>img{
-    width:2%;
+    width:3%;
      }
      
 .footer-bottom{
@@ -288,4 +493,16 @@ h6 a{
     margin-top: 20px;
     color: #555;
     width:100%
+}
+.socialmedia a img:hover{
+    color: #ff6347;
+    filter: brightness();
+
+}
+@media (max-width: 480px) {
+    .socialmedia>a>img{
+        width:15%;
+        display: flex;
+        flex-direction: column;}
+        
 }
