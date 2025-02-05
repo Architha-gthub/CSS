@@ -9,9 +9,14 @@ body {
     background-image:url(https://websitedemos.net/flower-shop-04/wp-content/uploads/sites/1414/2023/10/hero-bg.jpg);
     color: white;
     background-repeat: no-repeat;
-    /* background: rgba(0, 0, 0, 0.5);
- */
+    
 }
+@media screen and (max-width: 768px) {
+    body {
+        
+    }
+}
+
 
 header {
     display: flex;
@@ -52,8 +57,31 @@ nav ul li a.active,
 nav ul li a:hover {
     color: #ff7f7f;
 }
+@media screen and (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+
+    ul li a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+}
+
  .id {
-    height: 100vh;
+    height:96.5vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,6 +158,7 @@ p {
     text-align: center;
     border-radius: 8px;
 }
+ 
 
 /* Media query for mobile devices (widths 480px and below) */
 @media (max-width: 480px) {
